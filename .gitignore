@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Environments and Secrets
+.env
+.env.*
+environments/.env*
+!environments/.env.example
+
+# Playwright Artifacts & Reports
+/test-results/
+/playwright-report/
+/executive-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+/playwright/.runtime/
+
+# Legacy local scaffold (the maintained suite lives under tests/)
+/e2e/
+
+# OS and Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+export const INVALID_SESSION_CASES = [
+  { name: 'JSON malformado', raw: '{' },
+  { name: 'objeto nulo', raw: 'null' },
+  { name: 'arreglo', raw: '[]' },
+  { name: 'texto primitivo', raw: '"perfil"' },
+  { name: 'número primitivo', raw: '123' },
+  { name: 'booleano primitivo', raw: 'true' },
+  { name: 'perfil ausente', raw: '{}' },
+  { name: 'perfil nulo', raw: '{"perfil":null}' },
+  { name: 'perfil numérico', raw: '{"perfil":123}' },
+  { name: 'perfil objeto', raw: '{"perfil":{}}' },
+  { name: 'perfil arreglo', raw: '{"perfil":[]}' },
+  { name: 'perfil vacío', raw: '{"perfil":""}' },
+  { name: 'perfil con espacios', raw: '{"perfil":"   "}' },
+] as const;

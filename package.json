@@ -1,0 +1,44 @@
+{
+  "name": "frontend-empresarial",
+  "version": "1.0.0",
+  "description": "Framework de automatización E2E con Playwright y TypeScript para QA y UAT",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env PLAYWRIGHT_NO_COPY_PROMPT=1 playwright test",
+    "test:headed": "playwright test --headed",
+    "test:qa": "cross-env ENV=qa playwright test",
+    "test:uat": "cross-env ENV=uat playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:critical": "playwright test --grep @critical",
+    "test:unit": "playwright test --project=unit",
+    "report": "playwright show-report",
+    "report:executive": "node scripts/open-executive-report.cjs",
+    "auth:setup": "playwright test --project=auth-setup",
+    "test:authenticated": "playwright test --project=chromium-authenticated",
+    "test:public": "playwright test --project=chromium",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^22.20.2",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "@typescript-eslint/parser": "^8.70.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
+    "eslint": "^10.10.0",
+    "eslint-plugin-playwright": "^2.11.0",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3"
+  }
+}
